@@ -11,3 +11,4 @@ tqdm
 lmdb
 pyyaml
 yapf
+onnxruntime
