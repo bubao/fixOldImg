@@ -29,7 +29,7 @@ elif args.version.lower() in ['restoreformer','codeformer']:
     if not os.path.exists(f'model/{args.version}.onnx'):
         os.system(f"wget -c https://github.com/harisreedhar/Face-Upscalers-ONNX/releases/download/Models/{args.version.lower()}.onnx -P ./model")
 elif args.version in ['256','512']:
-    if not os.path.exists(f'model/{args.version}.onnx'):
+    if not os.path.exists(f'model/GPEN-BFR-{args.version}.onnx'):
         os.system(f"wget -c https://github.com/harisreedhar/Face-Upscalers-ONNX/releases/download/Models/GPEN-BFR-{args.version}.onnx -P ./model")
 
 def inference(input_img, output_img, version, scale):
