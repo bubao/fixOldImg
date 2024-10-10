@@ -1,11 +1,11 @@
 import cv2
-# import torch
 import onnxruntime
 import numpy as np
 
-class GFPGAN:
-    def __init__(self, model_path="GFPGANv1.4.onnx", device='cpu'):
+class RestoreFormer:
+    def __init__(self, model_path="restoreformer.onnx", device='cpu'):
         session_options = onnxruntime.SessionOptions()
+        session_options.log_severity_level = 3
         session_options.graph_optimization_level = onnxruntime.GraphOptimizationLevel.ORT_ENABLE_ALL
         providers = ["CPUExecutionProvider"]
         if device == 'cuda':

@@ -2,10 +2,11 @@ import os
 import cv2
 import numpy as np
 import argparse
-from onnx.GPEN.GPEN import GPEN
-from onnx.GFPGAN.GFPGAN import GFPGAN
-from onnx.Codeformer.Codeformer import CodeFormer
-from onnx.Restoreformer.Restoreformer import RestoreFormer
+
+from o_nx.GFPGAN.GFPGAN import GFPGAN
+from o_nx.GPEN.GPEN import GPEN
+from o_nx.Codeformer.Codeformer import CodeFormer
+from o_nx.Restoreformer.Restoreformer import RestoreFormer
 
 # 定义命令行参数解析
 parser = argparse.ArgumentParser(description='Process images with RealESRGAN and GFPGAN.')

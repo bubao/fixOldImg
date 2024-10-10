@@ -6,6 +6,7 @@ import numpy as np
 class CodeFormer:
     def __init__(self, model_path="codeformer.onnx", device='cpu'):
         session_options = onnxruntime.SessionOptions()
+        session_options.log_severity_level = 3
         session_options.graph_optimization_level = onnxruntime.GraphOptimizationLevel.ORT_ENABLE_ALL
         providers = ["CPUExecutionProvider"]
         if device == 'cuda':

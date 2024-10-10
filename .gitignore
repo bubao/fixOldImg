@@ -234,4 +234,4 @@ model
 venv
 input
 output
-gfpgan
+gfpgan/weights
