@@ -109,12 +109,12 @@ def inference(input_img, output_img, version, scale):
         except Exception as error:
             print('wrong scale input.', error)
         # 保存输出图像
-        if img_mode == 'RGBA':  # RGBA images should be saved in png format
-            extension = 'png'
-        else:
-            extension = 'jpg'
+        # if img_mode == 'RGBA':  # RGBA images should be saved in png format
+        #     extension = 'png'
+        # else:
+        #     extension = 'jpg'
         
-        cv2.imwrite(f'{output_img_filename}.{extension}', output)
+        cv2.imwrite(f'{output_img_filename}{extension}', output)
         # print(f'Image saved to {output_img_filename}.{extension}')
 
     except Exception as error:
