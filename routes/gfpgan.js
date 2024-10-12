@@ -37,12 +37,14 @@ async function processImage(imagePath, version, scale) {
 			const child = spawn(conda_exec, command, { cwd: path.join(__dirname, "../") });
 
 			// 捕获 stdout 和 stderr，便于调试
+			// eslint-disable-next-line no-unused-vars
 			child.stdout.on("data", data => {
-				console.log(`stdout: ${data}`);
+				// console.log(`stdout: ${data}`);
 			});
 
+			// eslint-disable-next-line no-unused-vars
 			child.stderr.on("data", data => {
-				console.error(`stderr: ${data}`);
+				// console.error(`stderr: ${data}`);
 			});
 
 			// 监听子进程的关闭事件
@@ -60,7 +62,7 @@ async function processImage(imagePath, version, scale) {
 			});
 		});
 
-		console.log(`outputFilePath:${outputFilePath}`);
+		// console.log(`outputFilePath:${outputFilePath}`);
 		// 如果没有错误发生，返回输出文件路径
 		return outputFilePath;
 
