@@ -3,9 +3,14 @@
 - [Xintao/GFPGAN](https://huggingface.co/spaces/Xintao/GFPGAN)
 - [harisreedhar/Face-Upscalers-ONNX](https://github.com/harisreedhar/Face-Upscalers-ONNX)
 
+## 安装
+
 ```shell
-python fix.py --input=./input/lincoln.jpg --output=./output/out5.jpg --version=RestoreFormer
-python example.py --input=./input/lincoln.jpg --output=./output/out18.jpg --version=512
+python3.10 -m venv venv
+source venv/bin/activate
+pip install -r requirements.txt
+mkdir output
+mkdir input
 ```
 
 ## 老照片上色&修复

@@ -1,27 +1,21 @@
 {
-  "name": "onx",
+  "name": "fix-old-img",
   "version": "0.0.0",
   "private": true,
   "scripts": {
     "start": "node ./bin/www",
-	"dev": "nodemon ./bin/www"
+    "dev": "nodemon ./bin/www"
   },
   "dependencies": {
-    "@techstark/opencv-js": "^4.10.0-release.1",
     "@types/multer": "^1.4.12",
     "@types/node": "^22.7.5",
     "axios": "^1.7.7",
-    "canvas": "^2.11.2",
     "cookie-parser": "~1.4.4",
     "debug": "~2.6.9",
     "express": "~4.16.1",
-    "http-errors": "~1.6.3",
-    "jade": "~1.11.0",
     "joi": "^17.13.3",
     "morgan": "~1.9.1",
     "multer": "^1.4.5-lts.1",
-    "onnxruntime-node": "^1.19.2",
-    "sharp": "^0.33.5",
     "uuid": "^10.0.0"
   },
   "devDependencies": {
