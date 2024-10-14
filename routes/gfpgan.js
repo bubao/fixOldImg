@@ -80,7 +80,7 @@ router.post("/", upload.single("input"), async (req, res, next) => {
 		// 上传的文件路径
 		const imagePath = req.file.path;
 
-		console.log(imagePath);
+		// console.log(imagePath);
 		// 处理上传的图像并运行 ONNX 模型
 		const outputImagePath = await processImage(imagePath, version, scale);
 
