@@ -2,6 +2,7 @@
 
 - [Xintao/GFPGAN](https://huggingface.co/spaces/Xintao/GFPGAN)
 - [harisreedhar/Face-Upscalers-ONNX](https://github.com/harisreedhar/Face-Upscalers-ONNX)
+- [jantic/DeOldify](https://github.com/jantic/DeOldify)
 
 ## 安装
 
