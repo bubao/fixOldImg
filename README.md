@@ -22,3 +22,31 @@ mkdir input
 python fix.py --input=./input/3.webp --output=./output/out25.jpg --version=deoldify
 python fix.py --input=./output/out25.jpg --output=./output/out26.jpg --version=v1.4
 ```
+
+## api 调用
+
+这里使用了 Express.js 作为 API 服务，启动命令如下：
+
+```shell
+nvm use 22
+npm ci
+npm start
+```
+
+```http
+POST /api/v1/gfpgan HTTP/1.1
+Host: 127.0.0.1:3000
+Content-Length: 279
+Content-Type: multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW
+
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="version"
+
+1.4
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="input"; filename="image.webp"
+Content-Type: image/webp
+
+(data)
+------WebKitFormBoundary7MA4YWxkTrZu0gW--
+```

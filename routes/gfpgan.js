@@ -71,7 +71,7 @@ async function processImage(imagePath, version, scale) {
 		throw error;
 	}
 }
-router.post("/enhance", upload.single("input"), async (req, res, next) => {
+router.post("/", upload.single("input"), async (req, res, next) => {
 	try {
 		const { body: { version } } = joiValidator(req, enhanceJoi);
 		// const version = req.body.version || "1.2";
