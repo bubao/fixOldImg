@@ -21,28 +21,28 @@ app.all("*", function(req, res, next) {
 	} else { next(); }
 });
 
-app.use("/api/v1/gfpgan",gfpgan);
-// view engine setup
-// app.set("views", path.join(__dirname, "views"));
-// app.set("view engine", "jade");
-
 app.use(logger("dev"));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 
-// catch 404 and forward to error handler
-// app.use(function(req, res, next) {
-// 	next(createError(404));
-// });
 app.use("/static", express.static(path.join(__dirname, "public")));
+
+app.use("/api/v1/gfpgan",gfpgan);
+
+
+// catch 404 and forward to error handler
+app.use((req, res) => {
+	res.status(404)
+		.send("404");
+});
 // error handler
-app.use(function ErrorHandler(err, req, res) {
+// eslint-disable-next-line no-unused-vars
+app.use(function ErrorHandler(err, req, res, next) {
 	const error = errcode(err.errcode);
 	console.log(err);
-	res.status(error.status)
-		.send({ ...error.body, ...(err.name === "MyError" ? err.resBody : {}) });
+	res.status(error.status);
+	res.send({ ...error.body, ...(err.name === "MyError" ? err.resBody : {}) });
 });
-// downloadModels();
 
 module.exports = app;
