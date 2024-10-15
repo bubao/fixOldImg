@@ -1,5 +1,7 @@
 # README
 
+![socialify](https://socialify.git.ci/bubao/fixOldImg/image?font=Source%20Code%20Pro&language=1&name=1&owner=1&pattern=Signal&stargazers=1&theme=Auto)
+
 - [Xintao/GFPGAN](https://huggingface.co/spaces/Xintao/GFPGAN)
 - [harisreedhar/Face-Upscalers-ONNX](https://github.com/harisreedhar/Face-Upscalers-ONNX)
 - [jantic/DeOldify](https://github.com/jantic/DeOldify)
